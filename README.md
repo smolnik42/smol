@@ -31,11 +31,11 @@
 # **Описание работы**
 **1. Инициализация браузера**
 
-Запускает Chromium в видимом режиме
+- Запускает Chromium в видимом режиме
 ```
 browser = p.chromium.launch(headless=False)
 ```
-отображает графический интерфейс браузера
+- Отображает графический интерфейс браузера
 ```
 headless=False
 ```
@@ -43,7 +43,7 @@ headless=False
 
 **2. Создание новой страницы**
 
-Открывает новую вкладку в браузере
+- Открывает новую вкладку в браузере
 ```
 page = browser.new_page()
 ```
@@ -51,11 +51,11 @@ page = browser.new_page()
 
 **3. Навигация на сайт**
 
-Переходит на сайт Giga Chat
+- Переходит на сайт Giga Chat
 ```
 page.goto("https://giga.chat/", wait_until="domcontentloaded")
 ```
-ждет загрузки DOM структуры
+- Ждет загрузки DOM структуры
 ```
 wait_until="domcontentloaded"
 ```
@@ -63,7 +63,7 @@ wait_until="domcontentloaded"
 
 **4. Ожидание элемента ввода**
 
-Ожидает появления любого поля ввода:
+- Ожидает появления любого поля ввода:
 ```
 page.wait_for_selector("input, textarea, [contenteditable]")
 ```
@@ -76,11 +76,11 @@ page.wait_for_selector("input, textarea, [contenteditable]")
 
 **5. Ввод текста**
 
-Вводит текст "sql" в найденное поле ввода
+- Вводит текст "sql" в найденное поле ввода
 ```
 page.keyboard.type("sql")
 ```
-Нажимает Enter для отправки запроса
+- Нажимает Enter для отправки запроса
 ```
 page.keyboard.press("Enter")
 ```
@@ -88,7 +88,7 @@ page.keyboard.press("Enter")
 
 **6. Ожидание ответа**
 
-Ждет 10 секунд для получения ответа от сервера
+- Ждет 10 секунд для получения ответа от сервера
 ```
 page.wait_for_timeout(10000)
 ```
@@ -96,7 +96,7 @@ page.wait_for_timeout(10000)
 
 **7. Завершение работы**
 
-Закрывает браузер
+- Закрывает браузер
 ```
 browser.close()
 ```
