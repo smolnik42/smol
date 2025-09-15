@@ -7,4 +7,4 @@ source myenv/bin/activate
 pipx install playwright 
 pipx install pytest 
 python3 -m playwright install chromium
-python test_1.py
+python 1_test.py
